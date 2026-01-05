@@ -6,6 +6,7 @@ public class CommitTest : MonoBehaviour
     void Start()
     {
         Debug.Log("Hello Github");
+        Debug.Log("Hello SourceTree");
     }
 
     // Update is called once per frame
