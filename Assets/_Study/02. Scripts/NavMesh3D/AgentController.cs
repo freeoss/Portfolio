@@ -7,33 +7,30 @@ public class AgentController : MonoBehaviour
     private NavMeshAgent agent;
     public NavMeshSurface surface;
 
-    private float bakeDistance = 10f;
+    public float bakeDistance = 10f;
     
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
-        surface. transform.position = transform.position;
+
+        surface.transform.position = transform.position;
         surface.BuildNavMesh();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                agent.SetDestination(hit.point);
-            }
-        }
+        var dir = new Vector3(h, 0, v);
+        dir = dir.normalized;
+
+        agent.SetDestination(transform.position + dir);
 
         float dist = Vector3.Distance(transform.position, surface.transform.position);
         if (dist > bakeDistance)
         {
-            surface. transform.position = transform.position;
+            surface.transform.position = transform.position;
             surface.BuildNavMesh();
         }
     }
