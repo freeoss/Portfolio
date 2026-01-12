@@ -1,20 +1,14 @@
 using UnityEngine;
 
-public class AnimalArea : MonoBehaviour
+public class AnimalArea : MonoBehaviour, ITriggerEvent
 {
-    private void OnTriggerEnter(Collider other)
+    public void InteractionEnter()
     {
-        if (other.CompareTag("Player"))
-        {
-            CameraManager.cameraAction?.Invoke(3, 11);
-        }
+        CameraManager.OnChangedCamera("Player", "Animal");
     }
 
-    private void OnTriggerExit(Collider other)
+    public void InteractionExit()
     {
-        if (other.CompareTag("Player"))
-        {
-            CameraManager.cameraAction?.Invoke(3, 0);
-        }
+        CameraManager.OnChangedCamera("Animal", "Player");
     }
 }

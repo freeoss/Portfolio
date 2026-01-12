@@ -1,31 +1,53 @@
 using System;
+using System.Collections.Generic;
 using Unity.Cinemachine;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    public static Action<int, int> cameraAction;
+    [SerializeField] private Transform clearShot;
+
+    private static event Action<string, string> onChangedCamera;
     
-    [SerializeField] private CinemachineClearShot clearShot;
-    [SerializeField] private CinemachineCamera[] cameras;
+    private Dictionary<string, CinemachineCamera> cameraDics = new Dictionary<string, CinemachineCamera>();
+
+    private void Awake()
+    {
+        if (!clearShot)
+        {
+            return;
+        }
+
+        for (int i = 0; i < clearShot.childCount; i++)
+        {
+            Transform child = clearShot.GetChild(i);
+            CinemachineCamera cam = child.GetComponent<CinemachineCamera>();
+
+            if (!cameraDics.ContainsKey(child.name))
+            {
+                cameraDics.Add(child.name, cam);
+            }
+        }
+    }
 
     private void OnEnable()
     {
-        cameraAction += SetCamera;
+        onChangedCamera += SetCamera;
     }
 
     private void OnDisable()
     {
-        cameraAction -= SetCamera;
+        onChangedCamera -= SetCamera;
     }
 
-    private void Start()
+    private void SetCamera(string from, string to)
     {
-        cameras = clearShot.GetComponentsInChildren<CinemachineCamera>();
+        cameraDics[from].Priority = 0;
+        cameraDics[to].Priority = 10;
     }
-
-    public void SetCamera(int index, int priority)
+    
+    public static void OnChangedCamera(string from, string to)
     {
-        cameras[index].Priority = priority;
+        onChangedCamera?.Invoke(from, to);
     }
 }
