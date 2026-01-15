@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotSpeed = 10f;
     [SerializeField] private float gravity = -30f;
 
+    [SerializeField] private GameObject inventoryUI;
+    
     private void Start()
     {
         cc = GetComponent<CharacterController>();
@@ -95,5 +97,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 inputDir = value.Get<Vector2>();
         moveInput = new Vector3(inputDir.x, 0, inputDir.y);
+    }
+
+    private void OnInventory(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            bool isActive = inventoryUI.gameObject.activeSelf;
+            inventoryUI.gameObject.SetActive(!isActive);
+        }
     }
 }
