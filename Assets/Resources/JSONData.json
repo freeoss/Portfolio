@@ -1,0 +1,29 @@
+{
+  "characters": 
+  [
+    {
+      "CharID": "C01",
+      "Name": "Player",
+      "HP": 100,
+      "Attack": 15
+    },
+    {
+      "CharID": "C02",
+      "Name": "Goblin",
+      "HP": 30,
+      "Attack": 5
+    },
+    {
+      "CharID": "C03",
+      "Name": "Dragon",
+      "HP": 500,
+      "Attack": 50
+    },
+    {
+      "CharID": "C04",
+      "Name": "Wizard",
+      "HP": 70,
+      "Attack": 20
+    }
+  ]
+}

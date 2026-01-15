@@ -1,0 +1,5 @@
+CharID,Name,HP,Attack
+C01,Player,100,15
+C02,Goblin,30,5
+C03,Dragon,500,50
+C04,Wizard,70,20

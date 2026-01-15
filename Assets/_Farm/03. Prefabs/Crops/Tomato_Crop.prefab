@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010095355520}
+  - component: {fileID: 7258805151414994981}
   m_Layer: 0
   m_Name: Tomato_Crop
   m_TagString: Untagged
@@ -35,6 +36,21 @@ Transform:
   - {fileID: 851398725091149157}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7258805151414994981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013410243764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17ced66c9e694a3eb5fa6f314e3cb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropState: 0
+  data: {fileID: 11400000, guid: 2a6f12ce47ef442c89b98a7c0eae7a7d, type: 2}
+  isHarvest: 0
 --- !u!1 &854978993730608787
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +689,7 @@ Transform:
   - {fileID: 8576414339002169271}
   - {fileID: 2853864801358350822}
   - {fileID: 1001106795605018667}
+  - {fileID: 5164536825895641279}
   m_Father: {fileID: 4000010095355520}
   m_LocalEulerAnglesHint: {x: 0, y: 86.421, z: 0}
 --- !u!33 &7868017213524888585
@@ -814,3 +831,65 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &7847000501787153086
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7875607521698435849}
+    m_Modifications:
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0336151
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1674247
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7288411
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.68468285
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604830121371798971, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+      propertyPath: m_Name
+      value: Alarm
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+--- !u!4 &5164536825895641279 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3119371116300939777, guid: ab7cc322cca9041c9af70a1bf7439d3c, type: 3}
+  m_PrefabInstance: {fileID: 7847000501787153086}
+  m_PrefabAsset: {fileID: 0}

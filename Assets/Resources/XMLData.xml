@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Characters>
+  <Character>
+    <CharID>C01</CharID>
+    <Name>Player</Name>
+    <HP>100</HP>
+    <Attack>15</Attack>
+  </Character>
+  <Character>
+    <CharID>C02</CharID>
+    <Name>Goblin</Name>
+    <HP>30</HP>
+    <Attack>5</Attack>
+  </Character>
+  <Character>
+    <CharID>C03</CharID>
+    <Name>Dragon</Name>
+    <HP>500</HP>
+    <Attack>50</Attack>
+  </Character>
+  <Character>
+    <CharID>C04</CharID>
+    <Name>Wizard</Name>
+    <HP>70</HP>
+    <Attack>20</Attack>
+  </Character>
+</Characters>

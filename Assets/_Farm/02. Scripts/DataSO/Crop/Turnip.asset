@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4400418374a234361b3188a2ab8bfec7, type: 3}
+  m_Name: Turnip
+  m_EditorClassIdentifier: 
+  fruit: {fileID: 8292393697671899266, guid: 711d05bf2f0ce41519f2f7339d632a09, type: 3}
+  growthTime: 2.5
+  maxFruitCount: 1

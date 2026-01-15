@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering.Universal;
 
 public class FieldSeed : IField
@@ -15,6 +16,11 @@ public class FieldSeed : IField
     {
         if (Input.GetMouseButtonDown(0) && selectCrop)
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+            
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
