@@ -16,8 +16,6 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private float rotSpeed = 10f;
     [SerializeField] private float gravity = -30f;
-
-    [SerializeField] private GameObject inventoryUI;
     
     private void Start()
     {
@@ -103,8 +101,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value.isPressed)
         {
-            bool isActive = inventoryUI.gameObject.activeSelf;
-            inventoryUI.gameObject.SetActive(!isActive);
+            UIManager.Instance.InventoryOnOff();
+        }
+    }
+
+    private void OnEscape(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            UIManager.Instance.AllPopUpClose();
         }
     }
 }
