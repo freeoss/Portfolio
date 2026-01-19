@@ -1194,7 +1194,7 @@ GameObject:
   - component: {fileID: 7247993592778224208}
   m_Layer: 0
   m_Name: Character 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1238,7 +1238,7 @@ Animator:
   m_GameObject: {fileID: 3652723203773242670}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ad472b939cd48144e9521d873c2e3018, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18fde8d5877754b2096a6ca464891da2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1317,6 +1317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cce6a7274c24cefbd7ecfbfbc1633d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 3
+  runSpeed: 6
+  rotSpeed: 10
+  gravity: -30
 --- !u!1 &3695993404694804004
 GameObject:
   m_ObjectHideFlags: 0

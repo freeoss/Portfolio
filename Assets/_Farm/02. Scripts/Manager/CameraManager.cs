@@ -8,6 +8,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Transform clearShot;
 
     private static event Action<string, string> onChangedCamera;
+    public static Action<Transform> onSetProperty;
     
     private Dictionary<string, CinemachineCamera> cameraDics = new Dictionary<string, CinemachineCamera>();
 
@@ -33,11 +34,13 @@ public class CameraManager : MonoBehaviour
     private void OnEnable()
     {
         onChangedCamera += SetCamera;
+        onSetProperty += SetProperty;
     }
 
     private void OnDisable()
     {
         onChangedCamera -= SetCamera;
+        onSetProperty -= SetProperty;
     }
 
     private void SetCamera(string from, string to)
@@ -49,5 +52,12 @@ public class CameraManager : MonoBehaviour
     public static void OnChangedCamera(string from, string to)
     {
         onChangedCamera?.Invoke(from, to);
+    }
+
+    public void SetProperty(Transform target)
+    {
+        cameraDics["Player"].Follow = target;
+        cameraDics["Player"].LookAt = target;
+        cameraDics["Animal"].LookAt = target;
     }
 }
