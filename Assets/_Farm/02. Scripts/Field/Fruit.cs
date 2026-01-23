@@ -1,4 +1,5 @@
 using System;
+using Farm;
 using UnityEngine;
 
 public class Fruit : MonoBehaviour, ITriggerEvent, IItem
@@ -36,5 +37,26 @@ public class Fruit : MonoBehaviour, ITriggerEvent, IItem
 
     public void Use()
     {
+        switch (ItemName)
+        {
+            case "Carrot_Fruit":
+                DataManager.Instance.SetGold(50).Forget();
+                break;
+            case "Corn_Fruit":
+                DataManager.Instance.SetGold(20).Forget();
+                break;
+            case "Eggplant_Fruit":
+                DataManager.Instance.SetGold(30).Forget();
+                break;
+            case "Pumpkin_Fruit":
+                DataManager.Instance.SetGold(10).Forget();
+                break;
+            case "Tomato_Fruit":
+                DataManager.Instance.SetGold(51).Forget();
+                break;
+            case "Turnip_Fruit":
+                DataManager.Instance.SetGold(60).Forget();
+                break;
+        }
     }
 }
