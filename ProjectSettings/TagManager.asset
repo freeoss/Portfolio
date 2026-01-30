@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Obstacle
+  - Bullet
+  - CinemachineTarget
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - UI
   - Obstacles
   - 
-  - 
-  - 
+  - Character Preview
+  - Tile
   - 
   - 
   - 
